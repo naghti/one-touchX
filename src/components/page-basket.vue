@@ -13,6 +13,6 @@
   display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 120px - 50px);
+    height: calc(100vh - 220px);
 }
 </style>
