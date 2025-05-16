@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Forum';
+    src: url('/public/fonts/Forum.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/public/fonts/Raleway.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-family: 'Forum', sans-serif;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.appBox {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contentBox {
+  flex-grow: 1;
+
+}
+
+.container {
+    padding: 0 15px;
+
+    @media (min-width: 768px) {
+        padding: 0 34px;
+    }
+
+    @media (min-width: 1440px) {
+        padding: 0 70px;
+    }
+}
+
+.button-primary {
+    padding: 10px 20px;
+    border: 3px solid #fff;
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff;
+}
+
+.button-secondary {
+    padding: 10px 20px;
+    border: 3px solid #000;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000;
+}
