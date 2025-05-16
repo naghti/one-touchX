@@ -6,6 +6,7 @@ import { storeToRefs } from 'pinia';
 import { onMounted, onUnmounted, ref } from 'vue';
 import NewsletterBlock from './newsletter-block.vue';
 
+
 const appStore = useAppStore();
 
 const { booksData } = storeToRefs(appStore);
@@ -62,17 +63,7 @@ const onResize = () => {
     }
 };
 
-// Интерфейс для данных о книге
-interface IBook {
-    imageName?: string;
-    author?: string;
-    name?: string;
-    type?: string;
-    price?: number;
-}
-
-// Функция отправляет данные о продукте при нажатии пользователем на кнопку "Купить"
-const onBuyItem = (item: IBook) => {
+const onBuyItem = () => {
     alert("Куплено!;)");
 };
 
@@ -128,7 +119,7 @@ function getImageUrl(imageName: string): string {
                         <div class="new__card-wrapper">
                             <p class="new__card-price">{{ book.price }} р.</p>
 
-                            <div class="new__card-button button-secondary" @click="onBuyItem(booksData[index])">
+                            <div class="new__card-button button-secondary" @click="onBuyItem()">
                                 купить
                             </div>
                         </div>
